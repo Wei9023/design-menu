@@ -1,0 +1,206 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: arial;
+
+  $global-header-height: 6em;
+  $global-footer-height: 2em;
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding:10px 0;
+    width: 100%;
+    background-color: white;
+    height: $global-header-height;
+    font: bold 12px/25px Arial, Helvetica;
+
+
+    h1{
+      font-size: 1.5em;
+    }
+
+    nav>ul {
+      width: 100%;
+      margin: 0;
+      padding: 10px 0 0 0;
+      list-style: none;  
+      background-color: #111;
+      background-image: linear-gradient(#444, #111);
+      border-radius: 50px;
+      box-shadow: 0 2px 1px #9c9c9c; 
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;    
+        display: none;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        z-index: 99999;    
+        background-color: #444;   
+        background-image: linear-gradient(#444, #111);    
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+        li {
+          float: none;
+          margin: 0;
+          padding: 0;
+          display: block;  
+          box-shadow: 0 1px 0 #111111, 
+                    0 2px 0 #777777;
+          }
+        
+        li:first-child a {
+          border-radius: 5px 5px 0 0;
+        }
+
+        li:first-child a:hover:after {
+          border-bottom-color: #04acec; 
+        }
+
+        li:last-child { 
+          box-shadow: none;    
+        }
+
+        li:first-child a:after {
+          content: '';
+          position: absolute;
+          left: 30px;
+          top: -8px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 8px solid #444;
+        }
+
+        li:last-child a {
+          border-radius: 0 0 5px 5px;
+        }
+
+        a {    
+          padding: 10px;
+          height: auto;
+          line-height: 1;
+          display: block;
+          white-space: nowrap;
+          float: none;
+          text-transform: none;
+          height: 10px;
+          width: 150px;
+        }
+
+        a:hover{
+          background-color: #0186ba;
+          background-image: linear-gradient(#04acec, #0186ba);
+        }
+        
+      } 
+    }
+
+    ul li{
+      float: left;
+      padding: 0 0 10px 0;
+      position: relative;
+    }
+
+    ul a{
+      float: left;
+      height: 25px;
+      padding: 0 25px;
+      font: bold 12px/25px Arial, Helvetica;
+      text-decoration: none;
+      color: #999;
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 #000;
+    }
+
+    ul:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+    
+    li:hover>a{
+      color: #fafafa;
+    }
+
+    li a:hover {
+      color: #fafafa;
+    }
+
+    ul li:hover > ul {
+      display: block;
+    } 
+  }
+
+  #navigation {
+    border-right:1px solid #999;
+    padding:10px 0px;
+    width:145px;
+    list-style: none;
+    // margin-top: $global-header-heigh;
+    // display: inline;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+
+    li> a {
+      float: none;
+      margin: 0;
+      padding: 0;
+      display:block;
+      color:black;
+      height:47px;
+      text-align:center;
+      text-decoration: none;
+      font: bold 12px/25px Arial, Helvetica;
+      text-transform: uppercase;
+      // text-shadow: 0 1px 0 #000;
+      width: 100%;
+      }
+
+    a:hover{
+      background-color: #0186ba;
+      background-image: linear-gradient(#04acec, #0186ba);
+      color:white;
+    }
+  }
+
+
+  main {
+    // background-color: orange;
+    margin-top: $global-header-height;
+    margin-bottom: $global-footer-height;
+    z-index: -1; // so header will be on top
+    min-height: 50em; // to make it long so you can see the scrolling
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    p {
+      margin: 10px 10px;
+    }
+  }
+
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font: bold 12px/25px Arial, Helvetica;
+    height: $global-footer-height;
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
+    border-radius: 20px;
+    box-shadow: 0 2px 1px #9c9c9c;
+    color: #999;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #000; 
+    text-align: center;
+  }
+}
