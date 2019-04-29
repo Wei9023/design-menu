@@ -3,6 +3,7 @@ import Header from "./components/header/header.js";
 import Footer from "./components/footer/footer.js";
 import Content from "./components/content/content.js";
 import Sidebar from "./components/sidebar/sidebar.js";
+import List from "./components/list/list.js";
 
 import "./design/reset.scss";
 import "./design/design.scss";
@@ -12,6 +13,7 @@ const App = () => {
     <>
       <Header title="React Design" />
       <Sidebar />
+      <List />
       <Content />
       <Footer>
         <div>&copy; 2018 Code Fellows</div>

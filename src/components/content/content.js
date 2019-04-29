@@ -3,11 +3,12 @@ import React from "react";
 import content from "./content.json";
 
 import Deck from "../deck/deck.js";
+import "../../design/form.scss";
 
 const Content = props => {
   return (
     <main>
-      <div>
+      {/* <div>
         <table>
           <tr>
             <th>Heading 1</th>
@@ -16,27 +17,27 @@ const Content = props => {
           <tbody />
           <tfoot />
         </table>
-      </div>
+      </div> */}
       <p>
         <form>
           <fieldset>
-            <legend>Some Data We Need</legend>
+            <legend>Contact</legend>
             <label>
               <span>Your Name</span>
               <input type="text" name="name" placeholder="Who are you?" />
             </label>
             <label>
-              <span>Color?</span>
-              <input type="color" name="color" placeholder="Who are you?" />
-            </label>
-
-            <label>
+              <span>Your favourite animal</span>
               <select>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="4">Four</option>
+                <option value="1">Cat</option>
+                <option value="2">Dog</option>
+                <option value="3">Bird</option>
+                <option value="4">Fish</option>
               </select>
+            </label>
+            <label>
+              <span>Your favourite color</span>
+              <input type="color" name="color" placeholder="Who are you?" />
             </label>
             <label>
               <span>Tell me about you</span>
