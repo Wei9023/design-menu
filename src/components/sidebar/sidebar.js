@@ -4,14 +4,10 @@ const Sidebar = props => {
   return (
     <ul id="navigation">
       <li>
-        <a href="/" class="link1">
-          Home
-        </a>
+        <a href="/">Home</a>
       </li>
       <li>
-        <a href="/" class="link2">
-          Metal
-        </a>
+        <a href="/">Metal</a>
       </li>
       <li>
         <a href="/" class="link3">

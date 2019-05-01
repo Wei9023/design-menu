@@ -1,0 +1,54 @@
+.deck {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  // background-color: #aeaeae;
+  justify-content: center;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  >header{
+    padding: 10px;
+    font-size: 30px;
+    // font-weight: bold;
+    order: 0;
+    
+  }
+  .deckHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.card{
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  // border-radius: 15px;
+  background-color: #f2f2f2;
+  p{
+    font-weight: bold;
+    margin: 2px;
+  }
+  img{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+  }
+  figcaption{
+    margin: 10px;
+  }
+  a{
+    background-color:  #0186ba;
+    padding: 5px;
+    margin: 5px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 12px;
+    // border-radius: 5px;
+    &:hover{
+      background-color: #a19393;
+    }
+  }
+}

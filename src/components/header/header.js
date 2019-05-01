@@ -2,8 +2,8 @@ import React from "react";
 
 const Header = props => {
   return (
-    <header>
-      <h1>{props.title}</h1>
+    <header class="row center-xs">
+      <h1 class="col-xs-6">{props.title}</h1>
       {props.children}
       <nav>
         <ul>
