@@ -1,15 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import Card from '../card/card.js';
+import Card from "../card/card.js";
+import "../../design/_deck.scss";
 
 const Deck = props => {
   return (
     <section className="deck">
-      <header>
-        <h2>{props.content.title}</h2>
-      </header>
-      {props.content.records &&
-        props.content.records.map((card, i) => <Card key={i} content={card} />)}
+      <div>
+        <p>{props.content.title}</p>
+      </div>
+      <div class="deckHolder">
+        {props.content.records &&
+          props.content.records.map((card, i) => (
+            <Card key={i} content={card} />
+          ))}
+      </div>
     </section>
   );
 };

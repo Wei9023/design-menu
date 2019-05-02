@@ -1,0 +1,12 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background: rgba(37, 175, 255, 0.534);
+  width: 30%;
+  
+  img{
+    width: 100%;
+    // height:100%;
+  }
+}

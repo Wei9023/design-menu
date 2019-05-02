@@ -1,0 +1,42 @@
+@mixin col-container{
+  display: flex;
+  flex-direction: column;
+}
+@mixin row-container{
+  display: flex;
+  flex-direction: row;
+}
+@mixin container-stretch {
+  align-items: stretch;
+}
+@mixin container-center{
+  aligh-items: center;
+}
+@mixin col-fourth{
+  width: 25%;
+}
+@mixin col-half{
+  width: 50%;
+}
+@mixin col-threefourths{
+  width: 75%;
+}
+@mixin col-full{
+  width: 100%;
+}
+@mixin row-fourth{
+  height: 25%
+}
+@mixin row-half {
+  height: 50%;
+}
+@mixin row-threefourths {
+  height: 75%;
+}
+@mixin row-full {
+  height: 100%;
+}
+
+@mixin flex-item-full {
+  flex: 1;
+}
