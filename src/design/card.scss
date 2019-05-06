@@ -1,0 +1,91 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    order: 1;
+  }
+
+  figure {
+    width: 100%;
+    order: 2;
+
+    img {
+      min-width: 100%;
+    }
+  }
+
+  p {
+    order: 3;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    order: 4;
+  }
+
+  &.clickable {
+    position: relative;
+
+    header,
+    p,
+    figcaption {
+      display: none;
+    }
+
+    .links {
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    a.primary:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+//   @include desktop {
+//     &.media-left {
+//       display: block;
+//       overflow: hidden;
+//       position: relative;
+
+//       figure {
+//         float: left;
+//       }
+
+//       .links {
+//         bottom: 0;
+//         position: absolute;
+//         right: 0;
+//       }
+//     }
+
+//     &.media-right {
+//       display: block;
+//       overflow: hidden;
+//       position: relative;
+
+//       figure {
+//         float: right;
+//       }
+
+//       .links {
+//         bottom: 0;
+//         flex-direction: row;
+//         position: absolute;
+//         left: 0;
+//       }
+//     }
+//   }
+
+//   @include cardStyles;
+// }

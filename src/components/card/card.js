@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+const content = require("../content/content.json");
+import("../../design/card.scss");
 
 const Card = props => {
   return (
     <div className="card">
-      <header>{props.content.title}</header>
+      <h3>{props.content.title}</h3>
       <p>{props.content.copy}</p>
       <figure>
         <img

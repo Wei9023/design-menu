@@ -1,8 +1,13 @@
-form{
+main>form{
   width:90%;
   height:450px;
-  margin:30px auto;
-  
+  margin:0.5em auto;
+  padding: 2em 2em;
+  display: flex;
+  border: 2px solid rgb(63, 62, 62);
+  border-radius: 10px;
+  flex-direction: row;
+
   legend{
     font-size:1.5em;
     color:#04acec;
@@ -10,8 +15,12 @@ form{
   
   label{
     font-size:17px;
-    display: block;
+    // display: block;
     margin-top:10px;
+    
+    display: flex;
+      flex-direction: column;
+      width: 100%;
     }
     input{
     width:200px;

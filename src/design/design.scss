@@ -1,13 +1,21 @@
+@import './mixins/grid.scss';
+
+
 html,
 body {
-  height: 100%;
-  width: 100%;
   font-family: arial;
+  // display: flex;
+  // min-height: 100vh;
+  // flex-direction: column;
+  // margin: 0;
+  @include col-container;
 
   $global-header-height: 6em;
   $global-footer-height: 2em;
 
   header {
+    // display:flex;
+    @include col-full;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,6 +28,13 @@ body {
 
     h1{
       font-size: 1.5em;
+      text-align: center;
+    }
+
+    nav{
+      display: flex;
+      flex-flow:row wrap;
+      justify-content: flex-start;
     }
 
     nav>ul {
@@ -44,8 +59,10 @@ body {
         background-image: linear-gradient(#444, #111);    
         -moz-border-radius: 5px;
         border-radius: 5px;
+        
 
         li {
+          @include col-fourth;
           float: none;
           margin: 0;
           padding: 0;
@@ -176,16 +193,19 @@ body {
 
 
   main {
-    // background-color: orange;
     margin-top: $global-header-height;
     margin-bottom: $global-footer-height;
     z-index: -1; // so header will be on top
     min-height: 50em; // to make it long so you can see the scrolling
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+    margin:10px 10px;
+    width:100%;
     p {
       margin: 10px 10px;
     }
+  }
+
+  .pContainer{
+    @include row-container;
   }
 
   footer {
@@ -205,3 +225,5 @@ body {
     text-align: center;
   }
 }
+
+

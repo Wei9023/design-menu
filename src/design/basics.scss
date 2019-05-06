@@ -1,0 +1,89 @@
+$bodyMargin: 1em;
+
+$h1: 2em;
+$h2: 1.75em;
+$h3: 1.5em;
+
+@mixin cardStyles {
+  border: 1px solid black;
+  margin: $cardMargin;
+  padding: $cardPadding;
+
+  header {
+    h3 {
+      font-size: $h3;
+      font-weight: bold;
+    }
+  }
+
+  figure {
+    margin: $cardContentSpacing;
+  }
+
+  figcaption {
+    display: none;
+  }
+
+  p {
+    margin: $cardContentSpacing;
+  }
+
+  .links {
+    margin: $cardContentSpacing;
+
+    a {
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    .primary {
+      color: #111;
+      font-weight: bold;
+    }
+  }
+
+  @include desktop {
+    &.media-left {
+      figure {
+        margin-right: 1em;
+        width: 35%;
+      }
+
+      .links {
+        bottom: 0.5em;
+        right: 0.5em;
+
+        .primary {
+          margin-left: 2em;
+        }
+      }
+    }
+
+    &.media-right {
+      display: block;
+      overflow: hidden;
+      position: relative;
+
+      figure {
+        float: right;
+        margin-left: 1em;
+        width: 35%;
+      }
+
+      .links {
+        bottom: 0.5em;
+        flex-direction: row;
+        position: absolute;
+        left: 0.5em;
+
+        .primary {
+          margin-right: 2em;
+        }
+      }
+    }
+  }
+}
+
+@mixin deckStyles {
+  margin-bottom: $deckSpacing;
+}
